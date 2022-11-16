@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Post</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+
+    <%- include("header") -%>
+
+<div class="container">
+    <form class="mt-5"  method="post" action="/addpost">
+        <div class="form-group mb-4">
+          <label for="username"><h5><em>UserName</em></h5></label>
+          <input required type="text" class="form-control" id="username" name="username"   placeholder="Enter your username:">
+        
+        </div>
+
+        <div class="form-group mb-4">
+          <label for="posttitle"><h5><em>Post-Title</em></h5></label>
+          <input required  type="text" class="form-control" id="posttitle" name="posttitle"   placeholder="Enter your post's title:">
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="postdesc"><h5><em>Post-Discription</em></h5></label>
+            <textarea required type="text" class="form-control" id="postdesc" name="postdesc"  placeholder="Enter your post's discription:"></textarea>
+          </div>
+       
+       <div class="container d-flex justify-content-center">
+        <button type="submit mb-4" class="btn btn-success">Post Now</button>
+    </div>
+      </form>
+    </div>
+
+
+    <%- include("footer") -%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
+</body>
+</html>
